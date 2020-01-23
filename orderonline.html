@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="stylesheetone.css" />
+    <meta charset="utf-8" />
+    <title>Order Online</title>
+    <style>
+        /*This is the class that styles the buttons to have a center position and a width of 60%*/
+        .btn-group {
+            position: center;
+            display: inline-block;
+            margin: auto;
+            width: 60%;
+        }
+
+        /*This identifier styles the buttons to have a width of 40% and background of green, a  circular border and text colour of white, text size of 28px. The weight of the text is bold. When the mouse is over the button it will be a pointer*/
+        #button1 {
+            width: 40%;
+            background-color: #3d6645;
+            height: 100px;
+            border-radius: 1000px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            border: 2px solid #3d6645;
+            padding: 14px 20px;
+            cursor: pointer;
+        }
+        /*This identifier styles the buttons to have a width of 40% and background of green, a  circular border and text colour of white, text size of 28px. The weight of the text is bold. When the mouse is over the button it will be a pointer*/
+        #button2 {
+            width: 60%;
+            background-color: #3d6645;
+            height: 100px;
+            border-radius: 100px;
+            color: white;
+            font-size: 28px;
+            font-weight: bold;
+            border: 2px solid #3d6645;
+            padding: 12px 20px;
+            cursor: pointer;
+        }
+        /*When the button is active the colour of the border will be a green colour*/
+        button:active {
+            border: #ff0000;
+        }
+        /*The width of the button is 200px and the height of the button is 80px*/
+        #button1 {
+            width: 200px;
+            height: 80px;
+        }
+        /*The width of the button is 200px and the height of the button is 80px*/
+        #button2 {
+            width: 200px;
+            height: 80px;
+        }
+        /*The identifier for the third button styles the button to have a width of 150px, a height of 40px, a background colour of green, a circular border, white text, a border that is solis with a width of 2px and is green and a the text is bold*/
+        #button3 {
+            padding: 1px;
+            width: 150px;
+            height: 40px;
+            background: #3d6645;
+            border-radius: 100px;
+            color: white;
+            border: 2px solid #3d6645;
+            font-weight: 400;
+        }
+        /*The  text of the class called wrapper is align to the center*/
+        .wrapper {
+            text-align: center;
+        }
+        /*This styles the input tag that is used for the form. It has a width of 500px and a height of 50px */
+        input {
+            width: 500px;
+            height: 50px;
+        }
+        /*This styles the select tag that is used for the form. It has a width of 500px and a height of 50px */
+        select {
+            width: 500px;
+            height: 50px;
+        }
+        /*This styles the text of the id of map to be aligned to the center*/
+        #map {
+            text-align: center;
+        }
+        /*This styles the p tag to have a fontsize to be 14px and the font will be 900 in thickness*/
+        p {
+            font-size: 14px;
+            font-weight: 900;
+        }
+        /*the text of the myDiv id is centered*/
+        #myDIV {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <!--This is the nav bar code-->
+    <div class="heading">
+
+        <!--This class 'focus-in-expand' is for the animation of the nav text to expand-->
+        <div class="focus-in-expand">
+            <!--Links the nav bar and the color of the text is white and there is no text decoration-->
+            <a style="color: white; text-decoration: none; " href="index.html">Home</a>
+            <a style="color: white; text-decoration: none; " href="locations.html">Menu</a>
+            <a style="color: white; text-decoration: none; " href="orderonline.html">OrderOnline</a>
+            <a style="color: white; text-decoration: none; " href="about.html">ABOUT</a>
+        </div>
+    </div>
+
+    <h2>ORDER ONLINE</h2>
+
+    <div class="wrapper">
+        <div class="buttons">
+            <!--This button on click will display a form-->
+            <button onclick="myFunction()" id="button1">Delivery</button>
+            <!--This button on click will display a map-->
+            <button onclick="otherFunction()" id="button2">Carryout</button>
+        </div>
+    </div>
+    <!--This is all the code for the form that i have when you click myFunction()-->
+    <div style="display:none;" id="myDIV">
+        <br />
+        <form name="myForm" action="js"
+              onsubmit="return validateForm()" method="get"><!--This is the code that validates the form whether you have inputed your in the boxes-->
+            <label for="uname"><b>Address Type</b></label>
+        <!--This is the code that lets you select multiple options-->
+            <select>
+                <option value="apt">Apartment</option>
+                <option value="house">House</option>
+                <option value="Business">Business</option>
+                <option value="other">Other</option>
+            </select><br />
+            <br />
+        <!--This is the code that lets you input into textbox's-->
+            <label for="uname"><b><span style="color: red;">*</span>Street Name</b></label>
+            <input type="text" placeholder="Enter Your Street Name" required><br />
+            <br />
+            <label for="uname"><b>&nbsp;&nbsp;<span style="color: red;">*</span>Suite/Apt#</b></label>
+            <input type="text" placeholder="Enter Your Suite/Apt #" required><br />
+            <br />
+            <label for="uname"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: red;">*</span>City</b></label>
+            <input type="text" placeholder="Enter Your City Name" required><br />
+            <br />
+            <label for="uname"><b>&nbsp;<span style="color: red;">*</span>Postal Code</b></label>
+            <input type="text" placeholder="Enter Your Postal Code" required><br />
+            <br />
+            <!--This is the submit button code-->
+            <button style="padding: 1px; margin: 3px;" id="button3" type="submit">Submit</button>
+
+        </form>
+    </div>
+    <!--This code display the map when otherFunction() is clicked-->
+    <div style="display:none;" id="map">
+        <p>Find your location</p>
+        <!--Links a google map with all the Winnipeg locations-->
+        <iframe id="map" src="https://www.google.com/maps/d/u/0/embed?mid=1CLq2sPawLDwj85jypnLck57DVfkX_Lrd" width="840" height="420"></iframe>
+    </div>
+
+    <script>
+        function myFunction() {
+            var y = document.getElementById("map");//sets y to the map id 
+            var x = document.getElementById("myDIV");//set x to the myDiv id    
+            if (x.style.display === "none") {//sets the form to display when the button is clicked
+                x.style.display = "block";
+                y.style.display = "none";
+            } else {
+                x.style.display = "none";
+            }
+
+        }
+        function otherFunction() {
+            var y = document.getElementById("map");//set y to the map id
+            var x = document.getElementById("myDIV");//sets x to the myDiv id
+            if (y.style.display === "none") {//sets the map to display when the button is clicked
+                y.style.display = "block";
+                x.style.display = "none";
+            } else {
+                y.style.display = "none";
+            }
+        }
+        //This code validates the form 
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == null || x == "") {//If there is no text in the boxes then set this alert that it has to filled out
+                alert("This field must be filled out");//the alert
+                
+                return false;
+            }
+        }
+    </script>
+
+
+</body>
+</html>

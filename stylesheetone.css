@@ -1,0 +1,96 @@
+﻿/*styles the nav tag to have the text align to center*/
+nav {
+    text-align: center;
+}
+/*All of the elements boxsizing is set to border-boxing*/
+* {
+    box-sizing: border-box;
+}
+/*All of the body items are set to the font below*/
+body {
+    font-family: Verdana, sans-serif;
+}
+/*The class heading has a padding around the content of 20px, a background colour of black, the colour of the text is white, the border would be circular, the text size is 16px, all the letters are uppercase, all the words are 15px apart*/
+.heading {
+    padding: 20px;
+    background-color: #000;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    word-spacing: 15px;
+}
+/*The id title has a font size of 22px the color is red, the item will float to the right of the page and the word spacing would be normal*/
+#title {
+    font-size: 22px;
+    color: #c63232;
+    float: right;
+    word-spacing: normal;
+}
+/*all of the anchors are very bold*/
+a {
+    font-weight: bolder;
+}
+/*the h2 elements, the color would be black, the text would be align to the center of the padding, the texr size is 36px, the padding around the elements are a thickness of 6px, the border of the padding would be round and the background is red*/
+h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 36px;
+    padding: 6px;
+    border-radius: 20px;
+    background: #c63232;
+}
+
+/*The h3 elements, would be centered and the textsize would be 28px*/
+h3 {
+    text-align: center;
+    font-size: 28px;
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px;
+    }
+}
+/*All the images are vertical aligned in the middle of the page, the maximum width of the image is 100%, the height is auto*/
+img {
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+/*This is the code that creates the animation of the images expanded*/
+.focus-in-expand {
+    -webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes focus-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+        filter: blur(12px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
